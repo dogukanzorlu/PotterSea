@@ -7,10 +7,21 @@ defmodule PotterSeaWeb.TokenController do
   end
 
   def create(conn, %{"token" => token_params}) do
+    uuid = UUID.uuid1()
+    result = GenServer.call(PotterSea.NFT, {:mint, %{uuid: uuid, ipfsHash: token_params["ipfs_hash"], price: token_params["price"]}}, 600_000)
+
+    {:ok, tx} = result[:res]
+    account = result[:acc]
+
+    {:ok, encode_metadata} = Jason.decode(token_params["meta_data"])
     token = %{
-      token_id: "uuid",
+      token_id: uuid,
+      account: account,
+      user: token_params["user"],
       price: token_params["price"],
-      ipfs_hash: token_params["ipfs_hash"]
+      tx: tx,
+      ipfs_hash: token_params["ipfs_hash"],
+      meta_data: [encode_metadata]
 
     }
 
@@ -21,5 +32,11 @@ defmodule PotterSeaWeb.TokenController do
   def show(conn, %{"id" => id}) do
     token = Mongo.find(:mongo, "tokens", %{token_id: id})
     render(conn, "show.json", token: token)
+  end
+
+  def delete(conn,  %{"id" => id}) do
+    Mongo.find_one_and_delete(:mongo, "tokens", %{tokenId: id})
+    tokens = Mongo.find(:mongo, "tokens", %{})
+    render(conn, "index.json", tokens: tokens)
   end
 end
