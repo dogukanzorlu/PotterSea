@@ -17,7 +17,7 @@ defmodule PotterSea.Application do
       PotterSeaWeb.Endpoint,
       # Start a worker by calling: PotterSea.Worker.start_link(arg)
       # {PotterSea.Worker, arg}
-      {Mongo, [name: :mongo, hostname: "localhost", database: "pt_db", pool_size: 100, timeout: 600_000, pool_timeout: 600_000]}
+      {Mongo, [name: :mongo, hostname: "172.17.0.1", database: "pt_db", pool_size: 100, timeout: 600_000, pool_timeout: 600_000]}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

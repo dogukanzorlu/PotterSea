@@ -55,4 +55,4 @@ config :phoenix, :plug_init_mode, :runtime
 
 config :ethereumex,
   client_type: :http,
-  url: "http://localhost:8545"
+  url: "http://172.17.0.1:8545"
