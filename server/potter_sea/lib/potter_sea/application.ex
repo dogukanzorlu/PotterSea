@@ -7,6 +7,7 @@ defmodule PotterSea.Application do
 
   @impl true
   def start(_type, _args) do
+    generate_abi_and_bin()
     children = [
       # Start the Telemetry supervisor
       PotterSeaWeb.Telemetry,
@@ -31,5 +32,13 @@ defmodule PotterSea.Application do
   def config_change(changed, _new, removed) do
     PotterSeaWeb.Endpoint.config_change(changed, removed)
     :ok
+  end
+
+  def generate_abi_and_bin do
+    {:ok, read_file} = File.read("./abis/NFT.json")
+    {:ok, nft_json} = Poison.decode(read_file)
+    abi_encode = Poison.encode!(nft_json["abi"])
+    File.write("./abis/nft.abi", abi_encode, [:binary])
+    File.write("./abis/nft.bin", String.replace(nft_json["bytecode"], "0x", ""))
   end
 end
