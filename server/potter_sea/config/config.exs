@@ -9,7 +9,7 @@ import Config
 
 # Configures the endpoint
 config :potter_sea, PotterSeaWeb.Endpoint,
-  url: [host: "localhost"],
+  url: [host: "0.0.0.0"],
   render_errors: [view: PotterSeaWeb.ErrorView, accepts: ~w(json), layout: false],
   pubsub_server: PotterSea.PubSub,
   live_view: [signing_salt: "Ym/COfTD"]
