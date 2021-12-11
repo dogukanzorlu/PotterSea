@@ -16,7 +16,7 @@ defmodule PotterSea.Application do
       # Start the Endpoint (http/https)
       PotterSeaWeb.Endpoint,
       # Start a worker by calling: PotterSea.Worker.start_link(arg)
-      # {PotterSea.Worker, arg}
+      {PotterSea.NFT, []},
       {Mongo, [name: :mongo, hostname: "172.17.0.1", database: "pt_db", pool_size: 100, timeout: 600_000, pool_timeout: 600_000]}
     ]
 
