@@ -32,4 +32,12 @@ contract NFT is ERC721{
             url: _ipfsHash
         });
     }
+
+    function getUrl(string memory _uuid) public view returns(string memory) {
+        return Items[_uuid].url;
+    }
+
+    function getPrice(string memory _uuid) public view returns(uint256) {
+        return Items[_uuid].price;
+    }
 }
