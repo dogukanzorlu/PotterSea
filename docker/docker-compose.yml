@@ -23,15 +23,19 @@ services:
       - '0.0.0.0'
       - --debug
   ipfs:
-    image: ipfs/go-ipfs:latest
-    hostname: ipfs_host1
-    volumes:
-    - "./export:/export"
-    - "./data/ipfs:/data/ipfs"
+    image: lscr.io/linuxserver/ipfs
+    container_name: ipfs
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
     ports:
-    - "5001:5001"
-    - "4001:4001"
-    - "8080:8080"
+      - 80:80
+      - 4001:4001
+      - 5001:5001
+      - 8080:8080
+      - 443:443 #optional
+    restart: unless-stopped
   backend:
     build: .
     entrypoint: ["sh", "/app/run.sh"]
