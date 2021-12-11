@@ -7,6 +7,7 @@ defmodule PotterSeaWeb.Router do
 
   scope "/api", PotterSeaWeb do
     pipe_through :api
+    resources "/tokens", TokenController
   end
 
   # Enables LiveDashboard only for development
