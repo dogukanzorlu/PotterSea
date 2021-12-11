@@ -3,95 +3,42 @@ defmodule PotterSea.NFT do
   The NFT context.
   """
 
-  import Ecto.Query, warn: false
-  alias PotterSea.Repo
+  use GenServer
 
-  alias PotterSea.NFT.Token
-
-  @doc """
-  Returns the list of tokens.
-
-  ## Examples
-
-      iex> list_tokens()
-      [%Token{}, ...]
-
-  """
-  def list_tokens do
-    raise "TODO"
+  def start_link(_) do
+    GenServer.start_link(__MODULE__, nil, name: PotterSea.NFT)
   end
 
-  @doc """
-  Gets a single token.
-
-  Raises if the Token does not exist.
-
-  ## Examples
-
-      iex> get_token!(123)
-      %Token{}
-
-  """
-  def get_token!(id), do: raise "TODO"
-
-  @doc """
-  Creates a token.
-
-  ## Examples
-
-      iex> create_token(%{field: value})
-      {:ok, %Token{}}
-
-      iex> create_token(%{field: bad_value})
-      {:error, ...}
-
-  """
-  def create_token(attrs \\ %{}) do
-    raise "TODO"
+  def init(_) do
+    web3_serv()
+    {:ok, nil}
   end
 
-  @doc """
-  Updates a token.
+  def handle_call({:mint, arg}, _, state) do
+    accounts = ExW3.accounts()
+    result = ExW3.Contract.send(:NFT, :mintToken, [arg[:uuid], arg[:ipfsHash], String.to_integer("#{arg[:price]}")], %{from: Enum.at(accounts, 0), gas: 2586796})
 
-  ## Examples
-
-      iex> update_token(token, %{field: new_value})
-      {:ok, %Token{}}
-
-      iex> update_token(token, %{field: bad_value})
-      {:error, ...}
-
-  """
-  def update_token(%Token{} = token, attrs) do
-    raise "TODO"
+    {:reply, %{acc: Enum.at(accounts, 0), res: result}, state}
   end
 
-  @doc """
-  Deletes a Token.
-
-  ## Examples
-
-      iex> delete_token(token)
-      {:ok, %Token{}}
-
-      iex> delete_token(token)
-      {:error, ...}
-
-  """
-  def delete_token(%Token{} = token) do
-    raise "TODO"
+  def handle_call({:get_token_url, arg}, _, state) do
+    result = ExW3.Contract.call(:NFT, :getUrl, [arg])
+    {:reply, result, state}
   end
 
-  @doc """
-  Returns a data structure for tracking token changes.
+  def web3_serv() do
+    accounts = ExW3.accounts()
 
-  ## Examples
+    first_acc = Enum.at(accounts, 0)
+    ExW3.balance(first_acc)
+    ExW3.block_number()
 
-      iex> change_token(token)
-      %Todo{...}
+    storage_abi = ExW3.Abi.load_abi("./abis/nft.abi")
+    storage_bin = ExW3.Abi.load_bin("./abis/nft.bin")
 
-  """
-  def change_token(%Token{} = token, _attrs \\ %{}) do
-    raise "TODO"
+    ExW3.Contract.start_link
+    ExW3.Contract.register(:NFT, abi: storage_abi)
+    {:ok, address, _} = ExW3.Contract.deploy(:NFT, bin: storage_bin, options: %{gas: 6721975, from: first_acc})
+    ExW3.Contract.at(:NFT, address)
   end
 end
