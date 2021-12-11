@@ -1,0 +1,46 @@
+services:
+  mongodb:
+    image: mongo:4.2.3-bionic
+    container_name: my-mongodb
+    ports:
+      - 27017:27017
+  ganache-cli:
+    image: trufflesuite/ganache-cli:latest
+    ports:
+      - "8545:8545"
+    volumes:
+      - ./ganache_data:/ganache_data
+    entrypoint:
+      - node
+      - /app/ganache-core.docker.cli.js
+      - --deterministic
+      - --db=/ganache_data
+      - --mnemonic
+      - 'minimum symptom minute gloom tragic situate silver mechanic salad amused elite beef'
+      - --networkId
+      - '5777'
+      - --hostname
+      - '0.0.0.0'
+      - --debug
+  ipfs:
+    image: ipfs/go-ipfs:latest
+    hostname: ipfs_host1
+    volumes:
+    - "./export:/export"
+    - "./data/ipfs:/data/ipfs"
+    ports:
+    - "5001:5001"
+    - "4001:4001"
+    - "8080:8080"
+  backend:
+    build: .
+    entrypoint: ["sh", "/app/run.sh"]
+    ports:
+      - "4000:4000"
+    volumes:
+      - ../server/potter_sea:/app
+      - ./run.sh:/app/run.sh
+    depends_on:
+      - mongodb
+      - ganache-cli
+      - ipfs
