@@ -1,18 +1,42 @@
 # PotterSea
+## Üçbüyücü turnuvasına özel,  Harry Potter temalı, dünyanın ilk Elixir backend'i ile geliştirmiş 3D MetaVerse NFT Marketplace'i.
 
-To start your Phoenix server:
+# İçindekiler
 
-  * Install dependencies with `mix deps.get`
-  * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+* [Server](#server)
+    * [Backend - Stack](#backend-stack)
+* [Client](#client)
+    * [Client - Stack](#client-stack)
+* [Kurulum](#kurulum)
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+## Server
+Solidity ile geliştirilmiş olan smart contractlar aracağılı ile üretmiş olduğunuz herhangi bir şey'i mintler. Üretilen NFT'i yi tekrar client'a sunar. Ethereum server ile iletişimi API içinde ki Rustla yazılmış NIF'ler aracılığı ile gerçekleştirir.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+### Backend-Stack
+- [Elixir] - Ana Çatı API
+- [Rust] - Eth server ile iletişimi sağlayan Native Functions
+- [Solidity] - Yüklenen şeyin  bir NFT'ye dönüşmesini sağlayan Smart Contracts.
+- [MongoDb] - Mintlenen her token'ın metadatası mongo'da tutulur.
+- [Ganache] - Eth server
+- [Truffle] - Smart Contract Migrations
+- [IPFS] - Mintlenen data ipfs de tutulur.
 
-## Learn more
+## Client
 
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+
+### Client-Stack
+
+## Kurulum
+
+Paket bağımlılıkları, birden fazla image ile docker'ın ayağı kalkması internet hızınıza da bağlı olarak 15 dk'yı bulabilmektedir.
+
+```sh
+cd PotterSea/docker
+sudo docker-compose up -d
+```
+
+- [Client] - localhost:
+- [Server] - localhost:4000
+- [Ganache Server] - localhost:8545
+- [IPFS API] - localhost:5001
+- [IPFS Client] - localhost:8080
