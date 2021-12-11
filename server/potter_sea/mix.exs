@@ -43,7 +43,9 @@ defmodule PotterSea.MixProject do
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
       {:mongodb_driver, "~> 0.7.4"},
-      {:poison, "~> 5.0"}
+      {:poison, "~> 5.0"},
+      {:uuid, "~> 1.1"},
+      {:exw3, "~> 0.6"}
     ]
   end
 
