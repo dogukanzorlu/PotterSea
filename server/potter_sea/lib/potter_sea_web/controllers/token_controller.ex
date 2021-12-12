@@ -35,7 +35,7 @@ defmodule PotterSeaWeb.TokenController do
   end
 
   def delete(conn,  %{"id" => id}) do
-    Mongo.find_one_and_delete(:mongo, "tokens", %{tokenId: id})
+    Mongo.delete_one(:mongo, "tokens", %{token_id: id})
     tokens = Mongo.find(:mongo, "tokens", %{})
     render(conn, "index.json", tokens: tokens)
   end
