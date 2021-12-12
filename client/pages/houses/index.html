@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+    <script src="../../js/link-controls.js"></script>
+    <script src="../../js/aframe-tooltip-component.js"></script>
+    <script src="../../js/camera-position.js"></script>
+    <script src="./index.js"></script>
+  </head>
+  <body>
+    <a-scene
+      raycaster="far: 100; objects: .raycastable;"
+      cursor="rayOrigin: mouse"
+      camera-position
+    >
+      <!-- Asset Management System -->
+      <a-assets>
+        <img id="floor" src="../../img/floor.jpg" />
+        <img id="floor-NRM" src="../../img/floor_normal.jpg" />
+        <img id="wall" src="../../img/wall.jpg" />
+        <img id="wall-NRM" src="../../img/wall_normal.jpg" />
+        <img id="wall_medieval" src="../../img/wall_medieval.jpg" />
+        <img id="wall_medieval-NRM" src="../../img/wall_medieval_normal.jpg" />
+        <img id="sky" src="../../img/sky.jpg" />
+        <img id="pottersea" src="../../img/pottersea_ss4.png" />
+        <a-asset-item
+          id="cityModel"
+          src="../../model/scene.gltf"
+        ></a-asset-item>
+      </a-assets>
+
+      <!-- Sky -->
+      <a-sky src="#sky" rotation="0 60 0"></a-sky>
+
+      <!-- Model -->
+      <a-entity
+        gltf-model="../../model/scene.gltf"
+        rotation="0 90 0"
+        position="-2.5 0 -4.0"
+        scale="0.02 0.02 0.02"
+      ></a-entity>
+
+      <a-link
+        href="../../index.html"
+        position="0 1.5 6.1"
+        image="#pottersea"
+        title="Home"
+        class="raycastable"
+      ></a-link>
+
+      <!-- Default Lighting In The A-Frame Scene -->
+      <!-- 1 Ambient Light-->
+      <a-entity id="light_ambient" light="type: ambient;color: #BBB"></a-entity>
+      <!-- 1 Directional Light-->
+      <a-entity
+        id="light_directional"
+        light="type: directional;color: #FFFFFF;intensity: 0.6"
+        position="-0.5 1 1"
+      ></a-entity>
+
+      <a-entity id="leftHand" link-controls="hand: left"></a-entity>
+      <a-entity id="rightHand" link-controls="hand: right"></a-entity>
+      <a-entity position="0 0 3" rotation="0 0 0">
+        <a-camera
+          user-height="1.6"
+          active="true"
+          wasd-controls="acceleration: 25"
+        >
+        </a-camera>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>

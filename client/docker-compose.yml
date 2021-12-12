@@ -1,0 +1,9 @@
+version: '3'
+services:
+  web:
+    image: pottersea
+    build: .
+    container_name: pottersea_container
+    restart: always
+    ports:
+      - "1001:80"
