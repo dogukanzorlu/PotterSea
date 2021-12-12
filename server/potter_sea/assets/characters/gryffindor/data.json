@@ -1,0 +1,203 @@
+{
+    "data": [
+        {
+            "_id": "61b3d87d532e050052974774",
+            "account": "0xa508dd875f10c33c52a8abb20e16fc68e981f186",
+            "ipfs_hash": "QmUkXSbh5iAKxqN9T9RFNfvARMJgoCSfgSnBgFVXyMVEs6",
+            "meta_data": [
+                {
+                    "actor": "Daniel Radcliffe",
+                    "alive": true,
+                    "alternate_actors": [
+                        ""
+                    ],
+                    "alternate_names": [
+                        ""
+                    ],
+                    "ancestry": "half-blood",
+                    "dateOfBirth": "31-07-1980",
+                    "eyeColour": "green",
+                    "gender": "male",
+                    "hairColour": "black",
+                    "hogwartsStaff": false,
+                    "hogwartsStudent": true,
+                    "house": "Gryffindor",
+                    "name": "Harry Potter",
+                    "patronus": "stag",
+                    "species": "human",
+                    "wand": {
+                        "core": "phoenix feather",
+                        "length": 11,
+                        "wood": "holly"
+                    },
+                    "wizard": true,
+                    "yearOfBirth": 1980
+                }
+            ],
+            "price": "10",
+            "token_id": "d7b05570-5a0a-11ec-a5d9-0242ac170005",
+            "tx": "0x4b72bc3a6e7c83e571551493cab780f854a4de9fd3ea736e50d583e7b2b6b62d",
+            "user": "zaferayan"
+        },
+        {
+            "_id": "61b3dc00a3f165005303384a",
+            "account": "0xa508dd875f10c33c52a8abb20e16fc68e981f186",
+            "ipfs_hash": "QmRXYTs9h5WUQNcvetUtN6uBW65pHEULHBBYE7ngJe1Vbi",
+            "meta_data": [
+                {
+                    "actor": "Emma Watson",
+                    "alive": true,
+                    "alternate_actors": [
+                        ""
+                    ],
+                    "alternate_names": [
+                        ""
+                    ],
+                    "ancestry": "muggleborn",
+                    "dateOfBirth": "19-09-1979",
+                    "eyeColour": "brown",
+                    "gender": "female",
+                    "hairColour": "brown",
+                    "hogwartsStaff": false,
+                    "hogwartsStudent": true,
+                    "house": "Gryffindor",
+                    "image": "http://hp-api.herokuapp.com/images/hermione.jpeg",
+                    "name": "Hermione Granger",
+                    "patronus": "otter",
+                    "species": "human",
+                    "wand": {
+                        "core": "dragon heartstring",
+                        "length": "",
+                        "wood": "vine"
+                    },
+                    "wizard": true,
+                    "yearOfBirth": 1979
+                }
+            ],
+            "price": "20",
+            "token_id": "efdb5602-5a0c-11ec-9080-0242ac170005",
+            "tx": "0x6ad4d1f1008f4e39d8df8e0ac523fc316d13c5b79b00395033cbc29544b449c0",
+            "user": "dogukan"
+        },
+        {
+            "_id": "61b3e3bba3f1650053862db0",
+            "account": "0xa508dd875f10c33c52a8abb20e16fc68e981f186",
+            "ipfs_hash": "QmcndvsQyu2LF2Z92qUjfh7Lnjsv2uD12h8iAmEMUBo392",
+            "meta_data": [
+                {
+                    "actor": "Rupert Grint",
+                    "alive": true,
+                    "alternate_actors": [
+                        ""
+                    ],
+                    "alternate_names": [
+                        ""
+                    ],
+                    "ancestry": "pure-blood",
+                    "dateOfBirth": "01-03-1980",
+                    "eyeColour": "blue",
+                    "gender": "male",
+                    "hairColour": "red",
+                    "hogwartsStaff": false,
+                    "hogwartsStudent": true,
+                    "house": "Gryffindor",
+                    "image": "http://hp-api.herokuapp.com/images/ron.jpg",
+                    "name": "Ron Weasley",
+                    "patronus": "Jack Russell terrier",
+                    "species": "human",
+                    "wand": {
+                        "core": "unicorn tail-hair",
+                        "length": 14,
+                        "wood": "willow"
+                    },
+                    "wizard": true,
+                    "yearOfBirth": 1980
+                }
+            ],
+            "price": "30",
+            "token_id": "8b74a83a-5a11-11ec-8ccf-0242ac170005",
+            "tx": "0xfc5cb3d6e1e075f4a631a37ed4bfd7a2a9207788d96ab02116f97a6d1d006233",
+            "user": "zafer"
+        },
+        {
+            "_id": "61b3e4d2a3f1650053d78970",
+            "account": "0xa508dd875f10c33c52a8abb20e16fc68e981f186",
+            "ipfs_hash": "QmX2k1gmu1uM4oCzT8PdyqUoTF4Z2TagBPF8TheBgW7UA8",
+            "meta_data": [
+                {
+                    "actor": "Richard Harris",
+                    "alive": false,
+                    "alternate_actors": [
+                        "Michael Gambon"
+                    ],
+                    "alternate_names": [
+                        ""
+                    ],
+                    "ancestry": "",
+                    "dateOfBirth": "",
+                    "eyeColour": "blue",
+                    "gender": "male",
+                    "hairColour": "silver",
+                    "hogwartsStaff": true,
+                    "hogwartsStudent": false,
+                    "house": "Gryffindor",
+                    "image": "",
+                    "name": "Albus Dumbledore",
+                    "patronus": "",
+                    "species": "human",
+                    "wand": {
+                        "core": "",
+                        "length": "",
+                        "wood": ""
+                    },
+                    "wizard": true,
+                    "yearOfBirth": 0
+                }
+            ],
+            "price": "40",
+            "token_id": "31ee7920-5a12-11ec-a085-0242ac170005",
+            "tx": "0x3c0825633a26de9fd94bc759ebadaadcaed9eaa6f25db3ad193ec0c8ef613798",
+            "user": "dogu"
+        },
+        {
+            "_id": "61b3e57fa3f1650053c3fedb",
+            "account": "0xa508dd875f10c33c52a8abb20e16fc68e981f186",
+            "ipfs_hash": "QmPhyqw6jQhkgLzXWdS2e6776ZpjFiRy9SHJRfZRpbtnGR",
+            "meta_data": [
+                {
+                    "actor": "Dame Maggie Smith",
+                    "alive": true,
+                    "alternate_actors": [
+                        ""
+                    ],
+                    "alternate_names": [
+                        ""
+                    ],
+                    "ancestry": "",
+                    "dateOfBirth": "04-10-1925",
+                    "eyeColour": "",
+                    "gender": "female",
+                    "hairColour": "black",
+                    "hogwartsStaff": true,
+                    "hogwartsStudent": false,
+                    "house": "Gryffindor",
+                    "image": "http://hp-api.herokuapp.com/images/mcgonagall.jpg",
+                    "name": "Minerva McGonagall",
+                    "patronus": "tabby cat",
+                    "species": "human",
+                    "wand": {
+                        "core": "",
+                        "length": "",
+                        "wood": ""
+                    },
+                    "wizard": true,
+                    "yearOfBirth": 1925
+                }
+            ],
+            "price": "50",
+            "token_id": "98fc7c70-5a12-11ec-97d3-0242ac170005",
+            "tx": "0x354f03bd891645b9c4b12f0371ba6b9086e6de9f111ae9913820e92cf7daae85",
+            "user": "zaf"
+        }
+    ]
+}

@@ -18,6 +18,7 @@ defmodule PotterSea.Application do
       # Start a worker by calling: PotterSea.Worker.start_link(arg)
       {PotterSea.NFT, []},
       {Mongo, [name: :mongo, hostname: "172.17.0.1", database: "pt_db", pool_size: 100, timeout: 600_000, pool_timeout: 600_000]}
+      {PotterSea.Seeder, []}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

@@ -1,0 +1,201 @@
+{
+    "data": [
+        {
+            "_id": "61b51a1ca3f165005452c55d",
+            "account": "0xa508dd875f10c33c52a8abb20e16fc68e981f186",
+            "ipfs_hash": "QmdCbSKQe8SAcA8Tro2i1Uh15L5HLb9x19Xq2jUuPiL5wy",
+            "meta_data": [
+                {
+                    "actor": "Tom Felton",
+                    "alive": true,
+                    "alternate_actors": [
+                        ""
+                    ],
+                    "alternate_names": [
+                        ""
+                    ],
+                    "ancestry": "pure-blood",
+                    "dateOfBirth": "05-06-1980",
+                    "eyeColour": "grey",
+                    "gender": "male",
+                    "hairColour": "blonde",
+                    "hogwartsStaff": false,
+                    "hogwartsStudent": true,
+                    "house": "Slytherin",
+                    "image": "http://hp-api.herokuapp.com/images/draco.jpg",
+                    "name": "Draco Malfoy",
+                    "patronus": "",
+                    "species": "human",
+                    "wand": {
+                        "core": "unicorn tail-hair",
+                        "length": 10,
+                        "wood": "hawthorn"
+                    },
+                    "wizard": true,
+                    "yearOfBirth": 1980
+                }
+            ],
+            "price": "50",
+            "token_id": "8b82f03e-5aca-11ec-9606-0242ac170005",
+            "tx": "0x7abf03d176b909d21f12ba7b48ce0f55daa1c42c1faeeb3f7f95ba1744ed88be",
+            "user": "dogukan"
+        },
+        {
+            "_id": "61b51a89a3f165005473818c",
+            "account": "0xa508dd875f10c33c52a8abb20e16fc68e981f186",
+            "ipfs_hash": "QmTbkottoWNnTvNxxABMqPgF3fdvJjPrkAb54K2JFvTX9R",
+            "meta_data": [
+                {
+                    "actor": "Genevieve Gaunt",
+                    "alive": true,
+                    "alternate_actors": [
+                        "Lauren Shotton",
+                        "Scarlett Byrne"
+                    ],
+                    "alternate_names": [
+                        ""
+                    ],
+                    "ancestry": "",
+                    "dateOfBirth": "",
+                    "eyeColour": "",
+                    "gender": "female",
+                    "hairColour": "",
+                    "hogwartsStaff": false,
+                    "hogwartsStudent": true,
+                    "house": "Slytherin",
+                    "image": "",
+                    "name": "Pansy Parkinson",
+                    "patronus": "",
+                    "species": "human",
+                    "wand": {
+                        "core": "",
+                        "length": "",
+                        "wood": ""
+                    },
+                    "wizard": true,
+                    "yearOfBirth": ""
+                }
+            ],
+            "price": "50",
+            "token_id": "cc087520-5aca-11ec-bfe0-0242ac170005",
+            "tx": "0x83f64f1fafec78e650de1eaf564e62afa99c72cc08a3d663e3dc005682a562c3",
+            "user": "zafer"
+        },
+        {
+            "_id": "61b51adca3f16500540d41d9",
+            "account": "0xa508dd875f10c33c52a8abb20e16fc68e981f186",
+            "ipfs_hash": "QmawnKrJMk2TQGuuneNQgUsvt762Wb8LSJcpSgBEZN4E6g",
+            "meta_data": [
+                {
+                    "actor": "",
+                    "alive": true,
+                    "alternate_actors": [],
+                    "alternate_names": [],
+                    "ancestry": "pure-blood",
+                    "dateOfBirth": "",
+                    "eyeColour": "",
+                    "gender": "male",
+                    "hairColour": "",
+                    "hogwartsStaff": false,
+                    "hogwartsStudent": true,
+                    "house": "Slythetin",
+                    "image": "",
+                    "name": "Theodore Nott",
+                    "patronus": "",
+                    "species": "human",
+                    "wand": {
+                        "core": "",
+                        "length": "",
+                        "wood": ""
+                    },
+                    "wizard": true,
+                    "yearOfBirth": ""
+                }
+            ],
+            "price": "50",
+            "token_id": "fdf7ab1e-5aca-11ec-b5a4-0242ac170005",
+            "tx": "0xf1b095d1f59010963d2e0a22c14598785492655df2eb0da2f2a44b75cd20d096",
+            "user": "dogukan"
+        },
+        {
+            "_id": "61b51b36a3f1650054e08522",
+            "account": "0xa508dd875f10c33c52a8abb20e16fc68e981f186",
+            "ipfs_hash": "QmSdC97o6uUKLoy6V7McP6R2iRNEh1ZGXJTgUc9s7FxcKC",
+            "meta_data": [
+                {
+                    "actor": "Alan Rickman",
+                    "alive": false,
+                    "alternate_actors": [
+                        ""
+                    ],
+                    "alternate_names": [
+                        ""
+                    ],
+                    "ancestry": "half-blood",
+                    "dateOfBirth": "09-01-1960",
+                    "eyeColour": "black",
+                    "gender": "male",
+                    "hairColour": "black",
+                    "hogwartsStaff": true,
+                    "hogwartsStudent": false,
+                    "house": "Slytherin",
+                    "image": "http://hp-api.herokuapp.com/images/snape.jpg",
+                    "name": "Severus Snape",
+                    "patronus": "doe",
+                    "species": "human",
+                    "wand": {
+                        "core": "",
+                        "length": "",
+                        "wood": ""
+                    },
+                    "wizard": true,
+                    "yearOfBirth": 1960
+                }
+            ],
+            "price": "50",
+            "token_id": "33dae304-5acb-11ec-92e8-0242ac170005",
+            "tx": "0x9c8678e7bf4661b7bc6364cdcd46a264fae2e3c400308a558faf4a00aa5d9027",
+            "user": "dogukan"
+        },
+        {
+            "_id": "61b51b61a3f165005474124f",
+            "account": "0xa508dd875f10c33c52a8abb20e16fc68e981f186",
+            "ipfs_hash": "QmZi3DAHAomgoRBiLtZHGnfcwaUQxtrkwtyvDcghZQWEHK",
+            "meta_data": [
+                {
+                    "actor": "Imelda Staunton",
+                    "alive": true,
+                    "alternate_actors": [
+                        ""
+                    ],
+                    "alternate_names": [
+                        ""
+                    ],
+                    "ancestry": "half-blood",
+                    "dateOfBirth": "",
+                    "eyeColour": "brown",
+                    "gender": "female",
+                    "hairColour": "grey",
+                    "hogwartsStaff": true,
+                    "hogwartsStudent": false,
+                    "house": "Slytherin",
+                    "image": "http://hp-api.herokuapp.com/images/umbridge.jpg",
+                    "name": "Dolores Umbridge",
+                    "patronus": "persian cat",
+                    "species": "human",
+                    "wand": {
+                        "core": "dragon heartstring",
+                        "length": 8,
+                        "wood": "birch"
+                    },
+                    "wizard": true,
+                    "yearOfBirth": ""
+                }
+            ],
+            "price": "50",
+            "token_id": "4d945988-5acb-11ec-a384-0242ac170005",
+            "tx": "0xee9aaebb7f1cc0045d88743b3ff678b5d6265ec3d0f96a877f455a246f098360",
+            "user": "dogukan"
+        }
+    ]
+}
