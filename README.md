@@ -5,8 +5,10 @@
   <img style="float: right;" src="/pottersea.png" alt="Vim-go logo"/>
 </p>
 
-# İçindekiler
+# Uygulama İçi Video
+[![PotterSea](https://img.youtube.com/vi/GKQ1u-M0J6o/0.jpg)](https://www.youtube.com/watch?v=GKQ1u-M0J6o)
 
+# İçindekiler
 * [Server](#server)
     * [Backend - Stack](#backend-stack)
 * [Client](#client)
