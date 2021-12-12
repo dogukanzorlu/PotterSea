@@ -28,7 +28,7 @@ defmodule PotterSea.Seeder do
         price: data["price"],
         tx: data["tx"],
         ipfs_hash: decoded["Hash"],
-        meta_data: [data["meta_data"]]
+        meta_data: data["meta_data"]
 
       }
 
@@ -54,7 +54,7 @@ defmodule PotterSea.Seeder do
         price: data["price"],
         tx: data["tx"],
         ipfs_hash: decoded["Hash"],
-        meta_data: [data["meta_data"]]
+        meta_data: data["meta_data"]
 
       }
 
