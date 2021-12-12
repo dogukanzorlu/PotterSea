@@ -12,6 +12,7 @@
 * [Client](#client)
     * [Client - Stack](#client-stack)
 * [Kurulum](#kurulum)
+* [Test](#test)
 
 ## Server
 Solidity ile geliştirilmiş olan smart contractlar aracağılı ile üretmiş olduğunuz herhangi bir şey'i mintler. Üretilen NFT'i yi tekrar client'a sunar. Ethereum server ile iletişimi API içinde ki Rustla yazılmış NIF'ler aracılığı ile gerçekleştirir.
@@ -64,6 +65,18 @@ sudo docker-compose up -d
 - [IPFS API] - localhost:5001
 - [IPFS Client] - localhost:8080
 
+## Test
+
+### API test
+```sh
+sudo docker exec -it docker_backend_1 /bin/bash
+root> mix test test/test/potter_sea_web/controllers/token_controller_test.exs
+```
+### Contract test
+```sh
+sudo docker exec -it docker_backend_1 /bin/bash
+root> truffle test
+```
 
 ### Zafer AYAN - Doğukan Zorlu
 ### Teknasyon
