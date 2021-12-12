@@ -45,7 +45,8 @@ defmodule PotterSea.MixProject do
       {:mongodb_driver, "~> 0.7.4"},
       {:poison, "~> 5.0"},
       {:uuid, "~> 1.1"},
-      {:exw3, "~> 0.6"}
+      {:exw3, "~> 0.6"},
+      {:httpoison, "~> 1.8"}
     ]
   end
 
