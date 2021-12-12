@@ -6,7 +6,8 @@
 </p>
 
 # Uygulama İçi Video
-[![PotterSea](https://img.youtube.com/vi/GKQ1u-M0J6o/0.jpg)](https://www.youtube.com/watch?v=GKQ1u-M0J6o)
+
+[`Youtube Link`](https://www.youtube.com/watch?v=GKQ1u-M0J6o)
 
 # İçindekiler
 * [Server](#server)
