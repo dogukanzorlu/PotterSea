@@ -65,5 +65,5 @@ sudo docker-compose up -d
 - [IPFS Client] - localhost:8080
 
 
-Zafer AYAN - Doğukan Zorlu
-Teknasyon
+### Zafer AYAN - Doğukan Zorlu
+### Teknasyon
