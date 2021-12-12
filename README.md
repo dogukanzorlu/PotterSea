@@ -69,6 +69,8 @@ cd client
 sudo docker-compose up -d
 ```
 
+Cors yememek için kullandığınız browser'a göre cors'u kapatmayı unutmayın!
+
 - [Client] - localhost:1001
 - [Server] - localhost:4000
 - [Ganache Server] - localhost:8545
