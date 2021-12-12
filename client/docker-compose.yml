@@ -7,3 +7,7 @@ services:
     restart: always
     ports:
       - "1001:80"
+networks:
+  default:
+    name: docker_default
+    driver: bridge
