@@ -2,8 +2,6 @@
 
 Üçbüyücü turnuvasına özel, Harry Potter temalı, dünyanın ilk Elixir backend'i ile geliştirilmiş 3D MetaVerse NFT Marketplace'i.
 
-Video:
-
 [![image info](https://raw.githubusercontent.com/dogukanzorlu/PotterSea/main/pottersea_youtube.png?token=AAKD644ZEQNBWVOL35TWCQDBX4UIA)](https://www.youtube.com/watch?v=GKQ1u-M0J6o)
 
 # İçindekiler
