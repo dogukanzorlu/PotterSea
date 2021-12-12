@@ -6,9 +6,7 @@
 
 ## DEMO
 
-- Firefox ile cors kapatılarak denenmesi önerilir!
-- Diğer browserlardan cors'u kapattığınıza emin olunuz!
-- Demo Link: [`http://18.192.204.47:1001`](http://18.192.204.47:1001)  
+- Demo Link: [`https://ozcanzaferayan.github.io/meta-nft-vr-client/`](https://ozcanzaferayan.github.io/meta-nft-vr-client)  
 
 
 # İçindekiler
