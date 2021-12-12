@@ -5,20 +5,20 @@ defmodule PotterSea.Seeder do
     Task.start_link(__MODULE__, :run, [])
   end
 
-  def run(_) do
+  def run() do
     gryffindor()
     slytherin()
   end
 
   def gryffindor do
     gryffindor_list = File.ls!("./assets/characters/gryffindor")
-    {:ok, character_json} = File.read("./assets/characters/gryffindor/data.json")
+    {:ok, character_json} = File.read("./assets/characters/gryffindor.json")
     {:ok, character_json_decoded} = Poison.decode(character_json)
     gryffindor_list
     |> Enum.map(fn i ->
       number = String.at(i,0)
       data = Enum.at(character_json_decoded["data"], (String.to_integer(number) - 1))
-      {:ok, res} = HTTPoison.post("http://localhost:5001/api/v0/add", {:multipart, [{:file, "./assets/characters/gryffindor/#{i}"}]})
+      {:ok, res} = HTTPoison.post("http://172.17.0.1:5001/api/v0/add", {:multipart, [{:file, "./assets/characters/gryffindor/#{i}"}]})
       decoded = Poison.decode!(res.body)
 
       token = %{
@@ -38,13 +38,13 @@ defmodule PotterSea.Seeder do
 
   def slytherin do
     slytherin_list = File.ls!("./assets/characters/slytherin")
-    {:ok, character_json} = File.read("./assets/characters/slytherin/data.json")
+    {:ok, character_json} = File.read("./assets/characters/slytherin.json")
     {:ok, character_json_decoded} = Poison.decode(character_json)
     slytherin_list
     |> Enum.map(fn i ->
       number = String.at(i,0)
       data = Enum.at(character_json_decoded["data"], (String.to_integer(number) - 1))
-      {:ok, res} = HTTPoison.post("http://localhost:5001/api/v0/add", {:multipart, [{:file, "./assets/characters/slytherin/#{i}"}]})
+      {:ok, res} = HTTPoison.post("http://172.17.0.1:5001/api/v0/add", {:multipart, [{:file, "./assets/characters/slytherin/#{i}"}]})
       decoded = Poison.decode!(res.body)
 
       token = %{
