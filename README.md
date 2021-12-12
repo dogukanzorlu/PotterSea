@@ -4,6 +4,13 @@
 
 [![image info](https://raw.githubusercontent.com/dogukanzorlu/PotterSea/main/pottersea_youtube.png?token=AAKD644ZEQNBWVOL35TWCQDBX4UIA)](https://www.youtube.com/watch?v=GKQ1u-M0J6o)
 
+## DEMO
+
+- Firefox ile cors kapatılarak denenmesi önerilir!
+- Diğer browserlardan cors'u kapattığınıza emin olunuz!
+- Demo Link: [`http://18.192.204.47:1001`](http://18.192.204.47:1001)  
+
+
 # İçindekiler
 
 - [Server](#server)
